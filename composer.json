@@ -1,6 +1,6 @@
 {
     "name": "respinar/literature",
-    "description":"Products catalog for Contao",
+    "description":"Literature for Contao",
     "keywords":["contao", "literature"],
     "type": "contao-module",
     "homepage":"https://github.com/respinar/literature",
