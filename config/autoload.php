@@ -5,9 +5,7 @@
  *
  * Copyright (c) 2005-2015 Leo Feyer
  *
- * @package Literature
- * @link    https://contao.org
- * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
+ * @license LGPL-3.0+
  */
 
 
@@ -26,15 +24,16 @@ ClassLoader::addNamespaces(array
 ClassLoader::addClasses(array
 (
 	// Classes
-	'literature\Literature'             => 'system/modules/literature/classes/Literature.php',
-
-	// Modules
-	'literature\ModuleLiterature'       => 'system/modules/literature/modules/ModuleLiterature.php',
-	'literature\ModuleLiteratureList'   => 'system/modules/literature/modules/ModuleLiteratureList.php',
-	'literature\ModuleLiteratureDetail' => 'system/modules/literature/modules/ModuleLiteratureDetail.php',
+	'literature\Literature'              => 'system/modules/literature/classes/Literature.php',
 
 	// Models
-	'literature\ModuleModel'            => 'system/modules/literature/models/ModuleModel.php',
+	'literature\LiteratureModel'         => 'system/modules/literature/models/LiteratureModel.php',
+	'literature\LiteratureCategoryModel' => 'system/modules/literature/models/LiteratureCategoryModel.php',
+
+	// Modules
+	'literature\ModuleLiterature'        => 'system/modules/literature/modules/ModuleLiterature.php',
+	'literature\ModuleLiteratureList'    => 'system/modules/literature/modules/ModuleLiteratureList.php',
+	'literature\ModuleLiteratureDetail'  => 'system/modules/literature/modules/ModuleLiteratureDetail.php',
 ));
 
 

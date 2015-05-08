@@ -17,29 +17,20 @@
  */
 namespace literature;
 
-
 /**
- * Class Literature
+ * Class LiteratureCategoryModel
  *
  * @copyright  respinar 2015
  * @author     Hamid Abbaszadeh
  * @package    Devtools
  */
-class Literature extends \BackendModule
+class LiteratureCategoryModel extends \Model
 {
 
-	///**
-	 //* Template
-	 //* @var string
-	 //*/
-	//protected $strTemplate = '';
+	/**
+	 * Name of the table
+	 * @var string
+	 */
+	protected static $strTable = 'tl_literature_category';
 
-
-	///**
-	 //* Generate the module
-	 //*/
-	//protected function compile()
-	//{
-
-	//}
 }

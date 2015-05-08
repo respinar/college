@@ -94,23 +94,11 @@ $GLOBALS['TL_DCA']['tl_literature_category'] = array
 		)
 	),
 
-	// Select
-	'select' => array
-	(
-		'buttons_callback' => array()
-	),
-
-	// Edit
-	'edit' => array
-	(
-		'buttons_callback' => array()
-	),
-
 	// Palettes
 	'palettes' => array
 	(
 		'__selector__'                => array('protected'),
-		'default'                     => '{title_legend},title,language,master;{redirect_legend},jumpTo;{protected_legend:hide},protected;'
+		'default'                     => '{title_legend},title;{redirect_legend},jumpTo;{protected_legend:hide},protected;'
 	),
 
 	// Subpalettes
@@ -137,6 +125,16 @@ $GLOBALS['TL_DCA']['tl_literature_category'] = array
 			'inputType'               => 'text',
 			'eval'                    => array('mandatory'=>true, 'maxlength'=>255),
 			'sql'                     => "varchar(255) NOT NULL default ''"
+		),
+		'jumpTo' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_literature_category']['jumpTo'],
+			'exclude'                 => true,
+			'inputType'               => 'pageTree',
+			'foreignKey'              => 'tl_page.title',
+			'eval'                    => array('mandatory'=>true, 'fieldType'=>'radio'),
+			'sql'                     => "int(10) unsigned NOT NULL default '0'",
+			'relation'                => array('type'=>'hasOne', 'load'=>'eager')
 		),
 		'protected' => array
 		(

@@ -23,7 +23,6 @@ $GLOBALS['TL_DCA']['tl_literature'] = array
 	(
 		'dataContainer'               => 'Table',
 		'ptabel'                      => 'tl_litrature_category',
-		'switchToEdit'                => true,
 		'enableVersioning'            => true,
 		'sql' => array
 		(
@@ -89,29 +88,10 @@ $GLOBALS['TL_DCA']['tl_literature'] = array
 		)
 	),
 
-	// Select
-	'select' => array
-	(
-		'buttons_callback' => array()
-	),
-
-	// Edit
-	'edit' => array
-	(
-		'buttons_callback' => array()
-	),
-
 	// Palettes
 	'palettes' => array
 	(
-		'__selector__'                => array(''),
 		'default'                     => '{title_legend},title,authors;{spec_legend},year,magazine,number,pages,doi,articleID,country;{publish_legend},published;'
-	),
-
-	// Subpalettes
-	'subpalettes' => array
-	(
-		''                            => ''
 	),
 
 	// Fields

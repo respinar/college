@@ -18,19 +18,19 @@
 namespace literature;
 
 /**
- * Class ModuleModel
+ * Class LiteratureModel
  *
  * @copyright  respinar 2015
  * @author     Hamid Abbaszadeh
  * @package    Devtools
  */
-class ModuleModel extends \Model
+class LiteratureModel extends \Model
 {
 
 	/**
 	 * Name of the table
 	 * @var string
 	 */
-	protected static $strTable = 'tl_module';
+	protected static $strTable = 'tl_literature';
 
 }
