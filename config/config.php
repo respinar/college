@@ -14,12 +14,17 @@
 /**
  * Back end modules
  */
-array_insert($GLOBALS['BE_MOD']['content'], 1, array
+array_insert($GLOBALS['BE_MOD']['college'], 1, array
 (
+	'college_member' => array
+	(
+		'tables'     => array('tl_college','tl_college_person'),
+		'icon'       => 'system/modules/college/assets/member.png',
+	),
 	'literature' => array
 	(
-		'tables'     => array('tl_literature_category','tl_literature'),
-		'icon'       => 'system/modules/literature/assets/icon.png',
+		'tables'     => array('tl_college','tl_college_literature'),
+		'icon'       => 'system/modules/college/assets/literature.png',
 	)
 ));
 
@@ -29,10 +34,11 @@ array_insert($GLOBALS['BE_MOD']['content'], 1, array
 
 array_insert($GLOBALS['FE_MOD'], 2, array
 (
-	'literature' => array
+	'college' => array
 	(
-		'literature_list'    => 'ModuleLiteratureList',
-		'literature_detail'  => 'ModuleLiteratureDetail',
+		'college_person_list'        => 'ModuleCollegePersonList',
+		'college_person_detail'      => 'ModuleCollegePersonDetail',
+		'college_literature_list'    => 'ModuleCollegeLiteratureList'
 	)
 ));
 

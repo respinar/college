@@ -13,16 +13,16 @@
 
 
 /**
- * Table tl_literature_category
+ * Table tl_college
  */
-$GLOBALS['TL_DCA']['tl_literature_category'] = array
+$GLOBALS['TL_DCA']['tl_college'] = array
 (
 
 	// Config
 	'config' => array
 	(
 		'dataContainer'               => 'Table',
-		'ctable'                      => array('tl_literature'),
+		'ctable'                      => array('tl_college_literature','tl_college_person'),
 		'enableVersioning'            => true,
 		'sql' => array
 		(
@@ -60,34 +60,40 @@ $GLOBALS['TL_DCA']['tl_literature_category'] = array
 		),
 		'operations' => array
 		(
+			'person' => array
+			(
+				'label'               => &$GLOBALS['TL_LANG']['tl_college']['person'],
+				'href'                => 'table=tl_college_person',
+				'icon'                => 'edit.gif'
+			),
 			'literature' => array
 			(
-				'label'               => &$GLOBALS['TL_LANG']['tl_literature_category']['literature'],
-				'href'                => 'table=tl_literature',
+				'label'               => &$GLOBALS['TL_LANG']['tl_college']['literature'],
+				'href'                => 'table=tl_college_literature',
 				'icon'                => 'edit.gif'
 			),
 			'edit' => array
 			(
-				'label'               => &$GLOBALS['TL_LANG']['tl_literature_category']['edit'],
+				'label'               => &$GLOBALS['TL_LANG']['tl_college']['edit'],
 				'href'                => 'act=edit',
 				'icon'                => 'header.gif'
 			),
 			'copy' => array
 			(
-				'label'               => &$GLOBALS['TL_LANG']['tl_literature_category']['copy'],
+				'label'               => &$GLOBALS['TL_LANG']['tl_college']['copy'],
 				'href'                => 'act=copy',
 				'icon'                => 'copy.gif'
 			),
 			'delete' => array
 			(
-				'label'               => &$GLOBALS['TL_LANG']['tl_literature_category']['delete'],
+				'label'               => &$GLOBALS['TL_LANG']['tl_college']['delete'],
 				'href'                => 'act=delete',
 				'icon'                => 'delete.gif',
 				'attributes'          => 'onclick="if(!confirm(\'' . $GLOBALS['TL_LANG']['MSC']['deleteConfirm'] . '\'))return false;Backend.getScrollOffset()"'
 			),
 			'show' => array
 			(
-				'label'               => &$GLOBALS['TL_LANG']['tl_literature_category']['show'],
+				'label'               => &$GLOBALS['TL_LANG']['tl_college']['show'],
 				'href'                => 'act=show',
 				'icon'                => 'show.gif'
 			)
@@ -120,7 +126,7 @@ $GLOBALS['TL_DCA']['tl_literature_category'] = array
 		),
 		'title' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_literature_category']['title'],
+			'label'                   => &$GLOBALS['TL_LANG']['tl_college']['title'],
 			'exclude'                 => true,
 			'inputType'               => 'text',
 			'eval'                    => array('mandatory'=>true, 'maxlength'=>255),
@@ -128,7 +134,7 @@ $GLOBALS['TL_DCA']['tl_literature_category'] = array
 		),
 		'jumpTo' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_literature_category']['jumpTo'],
+			'label'                   => &$GLOBALS['TL_LANG']['tl_college']['jumpTo'],
 			'exclude'                 => true,
 			'inputType'               => 'pageTree',
 			'foreignKey'              => 'tl_page.title',
@@ -138,7 +144,7 @@ $GLOBALS['TL_DCA']['tl_literature_category'] = array
 		),
 		'protected' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_literature_category']['protected'],
+			'label'                   => &$GLOBALS['TL_LANG']['tl_college']['protected'],
 			'exclude'                 => true,
 			'inputType'               => 'checkbox',
 			'eval'                    => array('submitOnChange'=>true),
@@ -146,7 +152,7 @@ $GLOBALS['TL_DCA']['tl_literature_category'] = array
 		),
 		'groups' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_literature_category']['groups'],
+			'label'                   => &$GLOBALS['TL_LANG']['tl_college']['groups'],
 			'exclude'                 => true,
 			'inputType'               => 'checkbox',
 			'foreignKey'              => 'tl_member_group.name',

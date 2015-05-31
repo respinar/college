@@ -13,16 +13,16 @@
 
 
 /**
- * Table tl_literature
+ * Table tl_college_literature
  */
-$GLOBALS['TL_DCA']['tl_literature'] = array
+$GLOBALS['TL_DCA']['tl_college_literature'] = array
 (
 
 	// Config
 	'config' => array
 	(
 		'dataContainer'               => 'Table',
-		'ptabel'                      => 'tl_litrature_category',
+		'ptabel'                      => 'tl_college_litrature_category',
 		'enableVersioning'            => true,
 		'sql' => array
 		(
@@ -62,26 +62,26 @@ $GLOBALS['TL_DCA']['tl_literature'] = array
 		(
 			'edit' => array
 			(
-				'label'               => &$GLOBALS['TL_LANG']['tl_literature']['edit'],
+				'label'               => &$GLOBALS['TL_LANG']['tl_college_literature']['edit'],
 				'href'                => 'act=edit',
 				'icon'                => 'edit.gif'
 			),
 			'copy' => array
 			(
-				'label'               => &$GLOBALS['TL_LANG']['tl_literature']['copy'],
+				'label'               => &$GLOBALS['TL_LANG']['tl_college_literature']['copy'],
 				'href'                => 'act=copy',
 				'icon'                => 'copy.gif'
 			),
 			'delete' => array
 			(
-				'label'               => &$GLOBALS['TL_LANG']['tl_literature']['delete'],
+				'label'               => &$GLOBALS['TL_LANG']['tl_college_literature']['delete'],
 				'href'                => 'act=delete',
 				'icon'                => 'delete.gif',
 				'attributes'          => 'onclick="if(!confirm(\'' . $GLOBALS['TL_LANG']['MSC']['deleteConfirm'] . '\'))return false;Backend.getScrollOffset()"'
 			),
 			'show' => array
 			(
-				'label'               => &$GLOBALS['TL_LANG']['tl_literature']['show'],
+				'label'               => &$GLOBALS['TL_LANG']['tl_college_literature']['show'],
 				'href'                => 'act=show',
 				'icon'                => 'show.gif'
 			)
@@ -103,7 +103,7 @@ $GLOBALS['TL_DCA']['tl_literature'] = array
 		),
 		'pid' => array
 		(
-			'foreignKey'              => 'tl_literature_category.title',
+			'foreignKey'              => 'tl_college_literature_category.title',
 			'sql'                     => "int(10) unsigned NOT NULL default '0'",
 			'relation'                => array('type'=>'belongsTo', 'load'=>'eager')
 		),
@@ -117,7 +117,7 @@ $GLOBALS['TL_DCA']['tl_literature'] = array
 		),
 		'title' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_literature']['title'],
+			'label'                   => &$GLOBALS['TL_LANG']['tl_college_literature']['title'],
 			'exclude'                 => true,
 			'inputType'               => 'text',
 			'eval'                    => array('mandatory'=>true, 'maxlength'=>255,'tl_class'=>'long'),
@@ -125,7 +125,7 @@ $GLOBALS['TL_DCA']['tl_literature'] = array
 		),
 		'authors' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_literature']['authors'],
+			'label'                   => &$GLOBALS['TL_LANG']['tl_college_literature']['authors'],
 			'exclude'                 => true,
 			'inputType'               => 'text',
 			'eval'                    => array('maxlength'=>255, 'tl_class'=>'long'),
@@ -133,7 +133,7 @@ $GLOBALS['TL_DCA']['tl_literature'] = array
 		),
 		'year' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_literature']['year'],
+			'label'                   => &$GLOBALS['TL_LANG']['tl_college_literature']['year'],
 			'exclude'                 => true,
 			'inputType'               => 'text',
 			'eval'                    => array('maxlength'=>255, 'tl_class'=>'w50'),
@@ -141,7 +141,7 @@ $GLOBALS['TL_DCA']['tl_literature'] = array
 		),
 		'magazine' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_literature']['magazinie'],
+			'label'                   => &$GLOBALS['TL_LANG']['tl_college_literature']['magazinie'],
 			'exclude'                 => true,
 			'inputType'               => 'text',
 			'eval'                    => array('maxlength'=>255, 'tl_class'=>'w50'),
@@ -149,7 +149,7 @@ $GLOBALS['TL_DCA']['tl_literature'] = array
 		),
 		'number' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_literature']['number'],
+			'label'                   => &$GLOBALS['TL_LANG']['tl_college_literature']['number'],
 			'exclude'                 => true,
 			'inputType'               => 'text',
 			'eval'                    => array('maxlength'=>255, 'tl_class'=>'w50'),
@@ -157,7 +157,7 @@ $GLOBALS['TL_DCA']['tl_literature'] = array
 		),
 		'pages' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_literature']['pages'],
+			'label'                   => &$GLOBALS['TL_LANG']['tl_college_literature']['pages'],
 			'exclude'                 => true,
 			'inputType'               => 'text',
 			'eval'                    => array('maxlength'=>255, 'tl_class'=>'w50'),
@@ -165,7 +165,7 @@ $GLOBALS['TL_DCA']['tl_literature'] = array
 		),
 		'country' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_literature']['country'],
+			'label'                   => &$GLOBALS['TL_LANG']['tl_college_literature']['country'],
 			'exclude'                 => true,
 			'inputType'               => 'text',
 			'eval'                    => array('maxlength'=>255, 'tl_class'=>'w50'),
@@ -173,7 +173,7 @@ $GLOBALS['TL_DCA']['tl_literature'] = array
 		),
 		'doi' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_literature']['doi'],
+			'label'                   => &$GLOBALS['TL_LANG']['tl_college_literature']['doi'],
 			'exclude'                 => true,
 			'inputType'               => 'text',
 			'eval'                    => array('maxlength'=>255, 'tl_class'=>'w50'),
@@ -181,7 +181,7 @@ $GLOBALS['TL_DCA']['tl_literature'] = array
 		),
 		'articleID' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_literature']['articleID'],
+			'label'                   => &$GLOBALS['TL_LANG']['tl_college_literature']['articleID'],
 			'exclude'                 => true,
 			'inputType'               => 'text',
 			'eval'                    => array('maxlength'=>255, 'tl_class'=>'w50'),
@@ -189,7 +189,7 @@ $GLOBALS['TL_DCA']['tl_literature'] = array
 		),
 		'published' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_literature']['published'],
+			'label'                   => &$GLOBALS['TL_LANG']['tl_college_literature']['published'],
 			'exclude'                 => true,
 			'filter'                  => true,
 			'flag'                    => 1,
