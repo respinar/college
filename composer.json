@@ -1,9 +1,9 @@
 {
-    "name": "respinar/literature",
-    "description":"Literature for Contao",
+    "name": "respinar/college",
+    "description":"College for Contao",
     "keywords":["contao", "literature"],
     "type": "contao-module",
-    "homepage":"https://github.com/respinar/literature",
+    "homepage":"https://github.com/respinar/college",
     "license":"LGPL-3.0+",
     "authors":[
         {
@@ -14,11 +14,12 @@
         }
     ],
     "support":{
-        "issues":"https://github.com/respinar/literature/issues"
+        "issues":"https://github.com/respinar/college/issues"
     },
     "require": {
         "php":">=5.3.2",
-        "contao/core":">=3.2,<4-dev"
+        "contao/core":">=3.2,<4-dev",
+        "menatwork/contao-multicolumnwizard":">=3.3"
     },
     "autoload": {
         "classmap": [""]
@@ -26,10 +27,10 @@
     "extra": {
         "contao": {
             "sources": {
-                "": "system/modules/literature"
+                "": "system/modules/college"
             },
             "transifex": {
-                "project": "literature",
+                "project": "contao-college",
                 "prefix": "master-",
                 "languages_cto": "languages",
                 "languages_tx": ".tx"
